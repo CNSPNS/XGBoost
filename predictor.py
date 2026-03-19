@@ -93,7 +93,7 @@ st.subheader("SHAP Force Plot Explanation")
 # 创建 SHAP 解释器，基于树模型（如随机森林）
 explainer_shap= shap.TreeExplainer(model)
 #计算 SHAP 值，用于解释模型的预测
-shap_values = expliner_shap.shap_values(pd.DataFrame([feature_values], columns=feature_names))
+shap_values = explainer_shap.shap_values(pd.DataFrame([feature_values], columns=feature_names))
 
 # 根据预测类别显示 SHAP 强制图
 # 期望值（基线值）
